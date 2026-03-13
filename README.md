@@ -31,11 +31,11 @@ The E-Voting System was developed by a team of five professional software engine
 
 | Name | Reg No. |
 |------|---------|
-| [Name 1] | [Reg No. 1] |
-| [Name 2] | [Reg No. 2] |
-| [Name 3] | [Reg No. 3] |
-| [Name 4] | [Reg No. 4] |
-| [Name 5] | [Reg No. 5] |
+| [Lufene Mark Travis] | [S23B23/032] |
+| Ezamamti Ronald Austine  | [S23B23/018] |
+| [Allan Kagimu Sebatta] | [S23B23/057] |
+| [Puoch Mabor Makuei ] | [S23B23/O55] |
+| [Ariko Ethan] | [S23b23/007] |
 
 **Institution:** Uganda Christian University  
 **Course:** Software Construction
