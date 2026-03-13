@@ -1,8 +1,6 @@
 # National E-Voting System
 
-## Professional Documentation
-
-**Version:** 2.1.0  
+ 
 **Date:** March 2026  
 **Platform:** Console-based Python Application  
 **Course:** Software Construction - Uganda Christian University
@@ -753,6 +751,6 @@ load() -> None
 
 ---
 
-**Document Version:** 1.0  
+
 **Last Updated:** March 12, 2026  
 **Author:** E-Voting Development Team
