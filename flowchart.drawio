@@ -1,0 +1,224 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="voting_flow" name="E-Voting Details">
+    <mxGraphModel dx="1268" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="data_init" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="Load evoting_data.json" vertex="1">
+          <mxGeometry height="60" width="100" x="380" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start App&#xa;(Login Screen)" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_init" edge="1" parent="1" source="data_init" target="start">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="login_choice" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Login Choice?" vertex="1">
+          <mxGeometry height="80" width="120" x="370" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_start_choice" edge="1" parent="1" source="start" target="login_choice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="exit_app" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="Exit App &amp;&#xa;Save Data" vertex="1">
+          <mxGeometry height="80" width="100" x="640" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_exit" edge="1" parent="1" source="login_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="exit_app" value="Exit (4)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="register" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Register Voter" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_reg" edge="1" parent="1" source="login_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="register" value="Register (3)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_rules" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Check Age &gt;= 18" vertex="1">
+          <mxGeometry height="40" width="130" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_stn" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Select Station" vertex="1">
+          <mxGeometry height="40" width="130" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_save" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Save Voter Data&#xa;Generate Card No." vertex="1">
+          <mxGeometry height="40" width="130" x="20" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1" edge="1" parent="1" source="register" target="reg_rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2" edge="1" parent="1" source="register" target="reg_stn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r3" edge="1" parent="1" source="register" target="reg_save">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_login" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Admin Auth" vertex="1">
+          <mxGeometry height="50" width="120" x="370" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_admin" edge="1" parent="1" source="login_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="admin_login" value="Admin (1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Admin Dashboard&#xa;(Many Options)" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_a_dash" edge="1" parent="1" source="admin_login" target="admin_dash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="super_admin_check" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Super Admin?" vertex="1">
+          <mxGeometry height="80" width="100" x="180" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_check" edge="1" parent="1" source="admin_dash" target="super_admin_check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_super" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Create Admins&#xa;Deactivate Admins" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e_su" edge="1" parent="1" source="super_admin_check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="admin_super" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_cand" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Candidates&#xa;(Create, Update, Delete)" vertex="1">
+          <mxGeometry height="50" width="140" x="180" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="cand_rule" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="Check Age 25-75&#xa;No Criminal Rec" vertex="1">
+          <mxGeometry height="50" width="140" x="10" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c1" edge="1" parent="1" source="admin_cand" target="cand_rule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_stn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Voting Stations&#xa;(Capacity &amp; Setup)" vertex="1">
+          <mxGeometry height="50" width="140" x="360" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_poll" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Poll Lifecycle" vertex="1">
+          <mxGeometry height="240" width="280" x="540" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="poll_pos" parent="admin_poll" style="rounded=0;whiteSpace=wrap;html=1;" value="1. Create Positions" vertex="1">
+          <mxGeometry height="40" width="120" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="poll_crt" parent="admin_poll" style="rounded=0;whiteSpace=wrap;html=1;" value="2. Create Poll&#xa;(Add positions &amp; stns)" vertex="1">
+          <mxGeometry height="40" width="120" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="poll_cand" parent="admin_poll" style="rounded=0;whiteSpace=wrap;html=1;" value="3. Assign Cands" vertex="1">
+          <mxGeometry height="40" width="120" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="poll_open" parent="admin_poll" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="4. Open Poll" vertex="1">
+          <mxGeometry height="40" width="100" x="160" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="poll_cls" parent="admin_poll" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="5. Close Poll" vertex="1">
+          <mxGeometry height="40" width="100" x="160" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p1" edge="1" parent="admin_poll" source="poll_pos" target="poll_crt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p2" edge="1" parent="admin_poll" source="poll_crt" target="poll_cand">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p3" edge="1" parent="admin_poll" source="poll_cand" target="poll_open">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p4" edge="1" parent="admin_poll" source="poll_open" target="poll_cls">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ad_cand" edge="1" parent="1" source="admin_dash" target="admin_cand">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ad_stn" edge="1" parent="1" source="admin_dash" target="admin_stn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ad_poll" edge="1" parent="1" source="admin_dash" target="admin_poll">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_res" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="View Results&#xa;&amp; Audit Logs" vertex="1">
+          <mxGeometry height="50" width="140" x="360" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ad_res" edge="1" parent="1" source="admin_dash" target="admin_res">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="voter_verify" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Verify/Deactivate&#xa;Voters" vertex="1">
+          <mxGeometry height="50" width="140" x="180" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ad_vv" edge="1" parent="1" source="admin_dash" target="voter_verify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="voter_login" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Voter Auth" vertex="1">
+          <mxGeometry height="50" width="120" x="880" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_voter_in" edge="1" parent="1" source="login_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="voter_login" value="Voter (2)">
+          <mxGeometry relative="1" x="-0.7088" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="750" y="240" />
+              <mxPoint x="750" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="voter_err" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="Deny if Unverified /&#xa;Deactivated" vertex="1">
+          <mxGeometry height="50" width="140" x="870" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_err" edge="1" parent="1" source="voter_login" target="voter_err">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="voter_dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Voter Dashboard" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_v_dash" edge="1" parent="1" source="voter_login" target="voter_dash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="voter_cast" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Cast Vote" vertex="1">
+          <mxGeometry height="50" width="100" x="890" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="voter_hist" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="View History /&#xa;Results" vertex="1">
+          <mxGeometry height="50" width="100" x="1060" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="cast_rule" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Check 1 Vote / Poll&#xa;Match Poll Stations" vertex="1">
+          <mxGeometry height="50" width="160" x="860" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="cast_record" parent="1" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Record Vote as SHA256 Hash" vertex="1">
+          <mxGeometry height="50" width="180" x="850" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vc" edge="1" parent="1" source="voter_dash" target="voter_cast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vh" edge="1" parent="1" source="voter_dash" target="voter_hist">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vcr1" edge="1" parent="1" source="voter_cast" target="cast_rule">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vcr2" edge="1" parent="1" source="cast_rule" target="cast_record">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data_save" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;" value="Save changes to&#xa;evoting_data.json" vertex="1">
+          <mxGeometry height="70" width="140" x="580" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="e_save1" edge="1" parent="1" source="admin_cand" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;" target="data_save">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_save2" edge="1" parent="1" source="admin_stn" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;" target="data_save">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="545" />
+              <mxPoint x="350" y="650" />
+              <mxPoint x="650" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_save3" edge="1" parent="1" source="voter_verify" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;" target="data_save">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="660" />
+              <mxPoint x="650" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_save4" edge="1" parent="1" source="cast_record" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;" target="data_save">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="670" />
+              <mxPoint x="650" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_save5" edge="1" parent="1" source="poll_cls" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;" target="data_save">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
